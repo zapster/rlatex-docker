@@ -10,5 +10,8 @@ RUN apt-get install -qy make
 RUN apt-get install -qy biber
 RUN apt-get install -qy inkscape
 
-WORKDIR /data
-VOLUME ["/data"]
+RUN useradd -m docker
+
+WORKDIR /home/docker/data
+VOLUME ["/home/docker/data"]
+USER docker
