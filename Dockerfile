@@ -1,5 +1,5 @@
 FROM ubuntu:trusty
-MAINTAINER Benedikt Lang <mail@blang.io>
+MAINTAINER Josef Eisl <zapster@zapster.cc>
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -q
