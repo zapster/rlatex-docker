@@ -12,6 +12,7 @@ RUN apt-get install -qy inkscape
 
 RUN useradd -m docker
 
-WORKDIR /home/docker/data
-VOLUME ["/home/docker/data"]
+WORKDIR /data
+VOLUME ["/data"]
 USER docker
+CMD ["bash"]

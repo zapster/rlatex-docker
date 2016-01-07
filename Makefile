@@ -1,7 +1,7 @@
 NS = zapster
 REPO = latex
 NAME = latex
-VOLUMES = -v $(PWD):/home/docker/data
+VOLUMES = -v $(PWD):/data
 
 .PHONY: build shell run start stop rm
 
