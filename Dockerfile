@@ -1,19 +1,17 @@
-FROM ubuntu:trusty
+FROM fedora:22
 MAINTAINER Josef Eisl <zapster@zapster.cc>
-ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update -q && apt-get install -qy \
-  texlive \
-  texlive-latex-extra \
-  texlive-lang-german \
+RUN dnf -y update && dnf clean all
+RUN dnf -y install \
+  texlive-scheme-small \
+  texlive-collection-langgerman \
   python-pygments \
   gnuplot \
   make \
   biber \
   inkscape \
   latexmk \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
+  && dnf clean all
 
 RUN useradd -m docker
 
