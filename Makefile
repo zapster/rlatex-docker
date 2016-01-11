@@ -1,6 +1,6 @@
 NS = zapster
-REPO = latex
-NAME = latex
+REPO = rlatex
+NAME = rlatex
 VOLUMES = -v $(PWD):/data
 
 .PHONY: build shell run start stop rm
