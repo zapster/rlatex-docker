@@ -9,6 +9,8 @@ RUN dnf -y install \
 
 USER docker
 
+ENV R_LIBS="/home/docker/R_libs"
+RUN mkdir -p $R_LIBS
 RUN Rscript -e 'install.packages(c(
   "ggplot2",
   "reshape2",
