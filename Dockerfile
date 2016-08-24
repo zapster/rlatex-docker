@@ -7,7 +7,13 @@ RUN dnf -y install \
   R \
   && dnf clean all
 
-RUN Rscript -e 'install.packages("ggplot2", repos="http://cran.rstudio.com/", clean=TRUE)'
-
 USER docker
+
+RUN Rscript -e 'install.packages(c(
+  "ggplot2",
+  "reshape2",
+  "dplyr",
+  "RColorBrewer"
+  ), repos="http://cran.rstudio.com/", clean=TRUE)'
+
 CMD ["bash"]
